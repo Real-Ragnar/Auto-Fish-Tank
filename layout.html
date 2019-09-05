@@ -1,0 +1,29 @@
+<!--base template
+defines a simple HTML skeleton document
+It’s the job of “child” templates to fill the empty blocks with content:-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ELG4139 - Habash</title>
+    <link rel ="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          <!-- adding the css file to customize our html. we can alternatively make our own css file -->
+
+</head>
+<body>
+<!--nav bar code put here because everything in this layout file gets shown on every page
+the 'includes' in the quotes refers to the folder that _navbar is in
+-->
+{% include 'includes/_navbar.html' %}
+
+<div class="container">
+{% block body %}        <!-- the 'block' tag allows the child to overwrite these block portions of this template -->
+{% endblock %}
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"><</script>
+<!-- adding in the javascript now -->
+
+</body>
+</html>
+
